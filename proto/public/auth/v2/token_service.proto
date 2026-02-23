@@ -1,0 +1,19 @@
+syntax = "proto3";
+package public.auth.v2;
+
+message RefreshTokenRequest {
+    string refresh_token = 1;
+    string aud = 2;
+    string client_secret = 3;
+}
+
+message RefreshTokenRequest {
+    string token_type = 1;
+    string access_token = 2;
+    int32 duration = 3;
+    string refresh_token = 4;
+}
+
+service TokenService {
+    rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
+}

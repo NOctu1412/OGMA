@@ -12,4 +12,5 @@ message User {
   string fullname = 4;
   common.core.v1.MediaReference profile_picture = 5;
   bool is_verified = 6;
+  string hashed_phone_number = 7;
 }

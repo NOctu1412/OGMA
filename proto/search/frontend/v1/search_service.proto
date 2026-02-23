@@ -9,8 +9,7 @@ import "common/core/v1/cursor.proto";
 message SearchUsersRequest {
   string query = 1;
   int32 limit = 2;
-  bool exclude_verified = 3;
-  bool exclude_unverified = 4;
+  repeated int32 scopes = 3;
 }
 
 message SearchUsersResponse {
